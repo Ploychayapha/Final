@@ -1,0 +1,51 @@
+67540084 = six,seven,five,four,zero,eight
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แปลงตัวเลขเป็นคำ</title>
+  <style>
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 300px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <p>ใส่ตัวเลข:</p>
+  <input type="text" id="numberInput" value="67540084">
+  <button onclick="convertToWords()">แสดง</button>
+  <div id="result"></div>
+
+  <script>
+    const digitWords = {
+      '0': 'zero',
+      '1': 'one',
+      '2': 'two',
+      '3': 'three',
+      '4': 'four',
+      '5': 'five',
+      '6': 'six',
+      '7': 'seven',
+      '8': 'eight',
+      '9': 'nine'
+    };
+
+    function convertToWords() {
+      const input = document.getElementById("numberInput").value;
+      const uniqueDigits = [...new Set(input.replace(/[^0-9]/g, ''))];
+      const wordList = uniqueDigits.map(d => digitWords[d]);
+      document.getElementById("result").innerText = `${input} = ${wordList.join(",")}`;
+    }
+  </script>
+</body>
+</html>
