@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เปลี่ยนพื้นหลัง</title>
+  <style>
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+    }
+    .red { background-color: red; color: white; }
+    .blue { background-color: blue; color: white; }
+    .yellow { background-color: gold; color: black; }
+    .clear { background-color: gray; color: white; }
+  </style>
+</head>
+<body>
+
+<h3>เปลี่ยนสีพื้นหลัง:</h3>
+<button class="red" onclick="changeColor('red')">สีแดง</button>
+<button class="blue" onclick="changeColor('blue')">สีน้ำเงิน</button>
+<button class="yellow" onclick="changeColor('yellow')">สีเหลือง</button>
+<button class="clear" onclick="changeColor('white')">clear</button>
+
+<script>
+  function changeColor(color) {
+    document.body.style.backgroundColor = color;
+  }
+</script>
+
+</body>
+</html>
