@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แสดงเวลา</title>
+  <style>
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h3>กรอกเวลา (hh:mm:ss):</h3>
+<input type="text" id="timeInput" placeholder="เช่น 01:23:45">
+<button onclick="showTime()">แสดง</button>
+
+<div id="result"></div>
+
+<script>
+  function showTime() {
+    const input = document.getElementById('timeInput').value;
+    const parts = input.split(":");
+
+    if (parts.length === 3) {
+      const hh = parts[0];
+      const mm = parts[1];
+      const ss = parts[2];
+
+      document.getElementById("result").innerText =
+        `${hh} นาที ${mm} วินาที ${ss} วินาที`;
+    } else {
+      document.getElementById("result").innerText = "รูปแบบไม่ถูกต้อง กรุณาใช้ hh:mm:ss";
+    }
+  }
+</script>
+
+</body>
+</html>
