@@ -1,0 +1,56 @@
+ข้อ 6
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แม่สูตรคูณเลขท้าย</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    td, th {
+      border: 1px solid #999;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h2>แสดงแม่สูตรคูณของเลข 84 จำนวน 15 ตัว</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>ลำดับ</th>
+      <th>สูตรคูณ</th>
+      <th>ผลลัพธ์</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+
+<script>
+  const number = 84; // 2 ตัวสุดท้ายของรหัส
+  const total = 15;
+  const tableBody = document.getElementById('tableBody');
+
+  for (let i = 1; i <= total; i++) {
+    const result = number * i;
+    const row = `<tr>
+                  <td>${i}</td>
+                  <td>${number} × ${i}</td>
+                  <td>${result}</td>
+                </tr>`;
+    tableBody.innerHTML += row;
+  }
+</script>
+
+</body>
+</html>
