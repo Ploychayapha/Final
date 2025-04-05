@@ -1,0 +1,32 @@
+{
+  "people": [
+    {
+      "name": "Michael",
+      "surname": "Pinner",
+      "mobile": "091234567",
+      "department": "Physics",
+      "time_of_occupy": 30
+    },
+    {
+      "name": "David",
+      "surname": "Chicago",
+      "mobile": "081345678",
+      "department": "Physics",
+      "time_of_occupy": 35
+    },
+    {
+      "name": "Alex",
+      "surname": "Madrid",
+      "mobile": "085345683",
+      "department": "Physics",
+      "time_of_occupy": 25
+    },
+    {
+      "name": "Denis",
+      "surname": "Paris",
+      "mobile": "064569385",
+      "department": "Chemistry",
+      "time_of_occupy": 24
+    }
+  ]
+}
